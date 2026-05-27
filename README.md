@@ -13,12 +13,12 @@ This repository contains an iterative implementation of a **Habits Tracking Appl
 
 ## Implemented User Stories & Criteria
 
-[cite_start]We selected the **Habits Tracking** specification and implemented all 4 User Stories[cite: 2]:
-* [cite_start]**US-01 (Define Habits):** Users can define personal routines with an undo option and system confirmation messages[cite: 6, 10, 11].
-* [cite_start]**US-02 (Mark Completed):** Users can check off habits to track goals with undo capabilities[cite: 13, 17, 18].
-* [cite_start]**US-03 (Compliance Calendar):** Visual interface showing habit completion history over time with system confirmation[cite: 20, 23, 24].
-* [cite_start]**US-04 (Delete Habits):** Users can clean up old habits to keep only the relevant ones, with a safety-net undo action[cite: 27, 30, 31].
-* [cite_start]**Global Criteria:** All data persists locally via `localStorage` to ensure it remains accessible afterward[cite: 12, 19, 26, 32].
+We selected the **Habits Tracking** specification and implemented all 4 User Stories[cite: 2]:
+**US-01 (Define Habits):** Users can define personal routines with an undo option and system confirmation messages[cite: 6, 10, 11].
+**US-02 (Mark Completed):** Users can check off habits to track goals with undo capabilities[cite: 13, 17, 18].
+**US-03 (Compliance Calendar):** Visual interface showing habit completion history over time with system confirmation[cite: 20, 23, 24].
+**US-04 (Delete Habits):** Users can clean up old habits to keep only the relevant ones, with a safety-net undo action[cite: 27, 30, 31].
+**Global Criteria:** All data persists locally via `localStorage` to ensure it remains accessible afterward[cite: 12, 19, 26, 32].
 
 ---
 
