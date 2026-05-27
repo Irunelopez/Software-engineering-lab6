@@ -51,21 +51,21 @@ We developed this application progressively across 4 distinct versions to refine
 
 ## Key Features Implemented
 
-### ✅ US-01: Define Habits
+## US-01: Define Habits
 - Form input for creating new habits
 - Real-time habit list display
 - Undo last habit with confirmation message
 - Automatic timestamp recording
 - Accessibility support with ARIA labels
 
-### ✅ US-02: Mark Completed
+## US-02: Mark Completed
 - Checkbox/button interface for marking habits complete
 - Toast notifications on completion/incompletion
 - Timestamp display for completed habits
 - Real-time visual feedback
 - Toggle functionality for undoing completion
 
-### ✅ US-03: Compliance Calendar
+## US-03: Compliance Calendar
 - 7-day weekly history grid visualization
 - Color-coded indicators (green ✓ for completed, gray ○ for missed)
 - Real-time calendar updates when habits are marked complete
@@ -74,7 +74,7 @@ We developed this application progressively across 4 distinct versions to refine
 - Responsive design across all devices
 - Full accessibility with ARIA labels
 
-### ✅ US-04: Delete Habits
+## US-04: Delete Habits
 - Delete button (trash icon) for individual habits
 - Undo delete functionality with 5-second window
 - Delete confirmation feedback
@@ -85,7 +85,7 @@ We developed this application progressively across 4 distinct versions to refine
 
 ## Application Screenshots
 
-*Replace the image placeholders below with your actual screenshot paths once saved in your repository (e.g., inside a `public/screenshots/` folder).*
+
 
 ### 1. Dashboard View & Habit Definition (US-01)
 <div align="center">
@@ -113,7 +113,7 @@ We developed this application progressively across 4 distinct versions to refine
 
 ## Lessons Learned on the Use of Copilot
 
-1. **Context is King:** Copilot works exponentially better when you explicitly quote or frame the functional requirements (like "Acceptance Criteria: Must be able to undo"). Vague prompts lead to incomplete or incorrect implementations. Always be specific about what you need.
+1. **Context is Key:** Copilot works exponentially better when you explicitly quote or frame the functional requirements (like "Acceptance Criteria: Must be able to undo"). Vague prompts lead to incomplete or incorrect implementations. Always be specific about what you need.
 
 2. **The Value of Iteration:** Generating a whole app in one prompt often leads to breaking bugs or missing details. Feeding prompts step-by-step per User Story mirrors real-world Agile sprints and produces cleaner, more maintainable code. Breaking down features by acceptance criteria is key.
 
@@ -123,70 +123,6 @@ We developed this application progressively across 4 distinct versions to refine
 
 5. **Testing & Documentation:** While Copilot can generate tests and documentation, it's best to review and customize these outputs. Always validate that the generated tests actually cover the acceptance criteria.
 
----
-
-## File Structure
-
-```
-src/
-├── components/
-│   ├── HabitTracker.js          # Main container component
-│   ├── HabitTracker.css         # Main styling
-│   ├── HabitForm.js             # Form for adding habits
-│   ├── HabitForm.css            # Form styling
-│   ├── HabitList.js             # List of habits with completion
-│   ├── HabitList.css            # List styling
-│   ├── ComplianceCalendar.js    # Calendar visualization (US-03)
-│   ├── ComplianceCalendar.css   # Calendar styling
-│   ├── ConfirmationMessage.js   # Toast notifications
-│   └── ConfirmationMessage.css  # Toast styling
-├── App.js
-├── App.css
-├── index.js
-└── index.css
-
-docs/
-└── US-03-COMPLIANCE-CALENDAR.md # Detailed implementation guide
-
-README.md                          # This file
-package.json                       # Dependencies and scripts
-```
 
 ---
-
-## Technical Stack
-
-- **React** 18.x - UI library for building components
-- **JavaScript (ES6+)** - Modern JavaScript features
-- **CSS3** - Styling with flexbox, grid, and animations
-- **LocalStorage API** - Data persistence
-- **ARIA & Semantic HTML** - Web accessibility
-
----
-
-## How to Run
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Irunelopez/Software-engineering-lab6.git
-   cd Software-engineering-lab6
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   npm start
-   ```
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
----
-
 
