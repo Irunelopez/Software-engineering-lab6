@@ -1,7 +1,5 @@
 # Habit Tracker Application 
 
-This repository contains an iterative implementation of a **Habits Tracking Application** built using **React**, **JavaScript**, and **Tailwind CSS**. The development was guided entirely by GitHub Copilot prompts, demonstrating the power of AI-assisted development for building feature-rich applications incrementally.
-
 **GitHub Repository Link:** https://github.com/Irunelopez/Software-engineering-lab6.git
 
 ---
