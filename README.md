@@ -2,7 +2,7 @@
 
 This repository contains an iterative implementation of a **Habits Tracking Application** built using **React**, **JavaScript**, and **Tailwind CSS**. [cite_start]The development was guided entirely by **GitHub Copilot** based on a set of 4 agile user stories and strict acceptance criteria.
 
-**GitHub Repository Link:** https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME)](https://github.com/Irunelopez/Software-engineering-lab6.git
+**GitHub Repository Link:** https://github.com/Irunelopez/Software-engineering-lab6.git
 
 ---
 
