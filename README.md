@@ -23,8 +23,6 @@ We selected the **Habits Tracking** specification and implemented all 4 User Sto
 
 **US-04 (Delete Habits):** Users can clean up old habits to keep only the relevant ones, with a safety-net undo action.
 
-**Global Criteria:** All data persists locally via `localStorage` to ensure it remains accessible afterward.
-
 ---
 
 ## Iterative Copilot Prompts & Git Commit History
