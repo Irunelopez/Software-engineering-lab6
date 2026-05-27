@@ -1,67 +1,165 @@
-# Habit Tracker Application (Seguiment d'Hàbits)
+# 📔 Habit Tracker Application
 
-This repository contains an iterative implementation of a **Habits Tracking Application** built using **React**, **JavaScript**, and **Tailwind CSS**. The development was guided entirely by **GitHub Copilot** based on a set of 4 agile user stories and strict acceptance criteria.
+A modern React-based Habit Tracker application for building and tracking daily habits. This application implements the US-01 user story with a clean, accessible UI.
 
-**GitHub Repository Link:** [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME)
+## ✨ Features
 
----
+### Core Functionality (US-01)
+- ✅ **Add Habits**: Form to define personal habits with an input field
+- ✅ **State Management**: Habits stored in React state array
+- ✅ **Confirmation Messages**: Success notifications when habits are added
+- ✅ **Undo Button**: Remove the last added habit with one click
+- ✅ **Clean UI**: Modern purple gradient design with smooth animations
+- ✅ **Accessibility**: Full WCAG AA compliance
 
-## 👥 Team Members
-* [Your Name / Team Member Names]
+### Additional Features
+- 📝 **Character Counter**: Real-time character count (max 100 characters)
+- 🎨 **Modern Design**: Purple-to-pink gradient theme with responsive layout
+- ⌨️ **Keyboard Support**: Enter key support for quick habit submission
+- 🔄 **Loading States**: Visual feedback during form submission
+- 📱 **Responsive**: Works seamlessly on desktop, tablet, and mobile devices
+- 🎯 **Numbered Habits**: Visual badges with habit count
+- ⏰ **Timestamps**: Each habit shows creation time
+- ♿ **Accessible**: ARIA labels, semantic HTML, screen reader support
 
----
+## 🚀 Getting Started
 
-## 📋 Implemented User Stories & Criteria
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-We selected the **Habits Tracking** specification and implemented all 4 User Stories:
-* **US-01 (Define Habits):** Users can add personal routines with an undo option and system confirmation messages.
-* **US-02 (Mark Completed):** Users can check off habits to track goals with undo capabilities.
-* **US-03 (Compliance Calendar):** Visual grid interface showing habit completion history over time.
-* **US-04 (Delete Habits):** Users can clean up old habits with a safety-net undo action.
-* **Global Criteria:** All data persists locally via `localStorage` to ensure it remains accessible afterward.
+### Installation
 
----
+```bash
+# Clone the repository
+git clone https://github.com/Irunelopez/Software-engineering-lab6.git
 
-## 🚀 Iterative Copilot Prompts & Git Commit History
+# Navigate to the project
+cd Software-engineering-lab6
 
-We developed this application progressively across 4 distinct versions to refine the logic and meet all acceptance criteria seamlessly:
+# Install dependencies
+npm install
+```
 
-### 🔹 Commit 1: Core Layout & Defining Habits (US-01)
-* **Prompt given to Copilot:**
-  > "Create a React functional component for a Habit Tracker application. For US-01, implement a form to define a personal habit (input field for habit name). Store the habits in a React state array. Include a confirmation message when a habit is added and a 'Undo' button/action to remove the last added habit if necessary. Ensure the UI is clean and accessible."
+### Running the Application
 
-### 🔹 Commit 2: Completion Tracking (US-02)
-* **Prompt given to Copilot:**
-  > "Modify the existing React habit tracker to support US-02. Next to each habit in the list, add a checkbox or button to mark it as completed for the day. If marked completed, show a temporary toast or text confirmation message. Implement an 'Undo' option that lets the user uncheck it and reverts the state. Ensure all state updates persist correctly in the component."
+```bash
+# Start the development server
+npm start
+```
 
-### 🔹 Commit 3: Compliance Calendar Visualization (US-03)
-* **Prompt given to Copilot:**
-  > "Extend the application to implement US-03. Add a simple calendar grid or a 7-day weekly history view component underneath the habit list. When a habit is marked completed, toggle the respective day's visual indicator (e.g., green for completed, gray for missed) to visualize progress. Provide a success message when the calendar view renders/updates, and make sure any completion undo actions immediately update this calendar view."
+The application will open in your browser at `http://localhost:3000`
 
-### 🔹 Commit 4: Habit Deletion & LocalStorage Persistence (US-04)
-* **Prompt given to Copilot:**
-  > "Finalize the application with US-04. Add a 'Delete' button (trash icon) next to each habit to remove old habits entirely. Include an immediate 'Undo Delete' banner or button that restores the habit if clicked within a few seconds. To fulfill the criteria 'All data must be saved correctly and remain accessible afterward' across all stories, add a `useEffect` hook to automatically save and load the habits state from `localStorage`."
+## 🏗️ Project Structure
 
----
+```
+src/
+├── components/
+│   ├── HabitTracker.js          # Main container component
+│   ├── HabitTracker.css
+│   ├── HabitForm.js              # Form for adding habits
+│   ├── HabitForm.css
+│   ├── ConfirmationMessage.js    # Success/undo notifications
+│   ├── ConfirmationMessage.css
+│   ├── HabitList.js              # Display habits list
+│   └── HabitList.css
+├── App.js                        # Root component
+├── App.css
+├── index.js                      # React entry point
+└── index.css                     # Global styles
+```
 
-## 📸 Application Screenshots
+## 🎯 Component Overview
 
-### 1. Dashboard View & Habit Definition (US-01)
-![Main Dashboard Interface](public/screenshots/dashboard.png)
-*Description: The main interface showing the form to add habits and active tracking lists.*
+### HabitTracker.js
+Main orchestrator component that manages:
+- Habit state array
+- Confirmation message displays
+- Undo functionality
+- Component composition
 
-### 2. Marking Completion & History Tracking (US-02 & US-03)
-![Completion and Calendar View](public/screenshots/calendar.png)
-*Description: Habits checked off for the day reflecting changes directly onto the active compliance calendar grid.*
+### HabitForm.js
+Provides the form interface for adding habits:
+- Text input with max 100 characters
+- Character counter with visual warnings
+- Submit button with loading state
+- Keyboard support (Enter key)
+- Full ARIA accessibility
 
-### 3. Action Reversal & System Feedback (Undo Actions)
-![Undo Action Banner](public/screenshots/undo_action.png)
-*Description: Visual feedback toast showing successful actions with a fully functional 'Undo' button.*
+### ConfirmationMessage.js
+Displays feedback messages:
+- Success confirmation when habit is added
+- Undo confirmation when habit is removed
+- Auto-dismisses after 3 seconds
+- Color-coded for different message types
 
----
+### HabitList.js
+Shows the list of all habits:
+- Numbered habit badges
+- Habit name and creation timestamp
+- Empty state message
+- Undo button to remove last habit
+- Smooth animations
 
-## 💡 Lessons Learned on the Use of Copilot
+## ♿ Accessibility Features
 
-1. **Context is King:** Copilot works exponentially better when you explicitly quote or frame the functional requirements (like "Acceptance Criteria: Must be able to undo"). If you don't mention the exact constraints, it defaults to standard implementations omitting safety actions like 'Undo'.
-2. **The Value of Iteration:** Generating a whole app in one prompt often leads to breaking bugs or missing details. Feeding prompts step-by-step per User Story mirrors real-world Agile sprints and results in much higher code accuracy.
-3. **Refactoring & State Consistency:** Copilot excels at drafting UI elements, but sometimes requires specific prompting to ensure states stay unified (e.g., tying the completion status toggle instantly to the calendar grid and triggering `localStorage` writes synchronously).
+- **WCAG AA Compliant**: Meets Web Content Accessibility Guidelines level AA
+- **ARIA Labels**: Proper aria-label and aria-describedby attributes
+- **Semantic HTML**: Uses proper HTML5 semantic elements
+- **Keyboard Navigation**: Full keyboard support with Enter key submission
+- **Focus Indicators**: Clear visual focus states on all interactive elements
+- **Screen Reader Support**: Proper roles, live regions, and announcements
+- **Color Contrast**: AA+ contrast ratios throughout the application
+- **Touch Friendly**: Adequate button sizes and touch targets
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary Gradient**: #667eea to #764ba2 (Purple)
+- **Success**: #28a745 (Green)
+- **Undo/Warning**: #ffc107 (Yellow)
+- **Danger**: #ff6b6b (Red)
+- **Neutral**: #333, #666, #999 (Grayscale)
+
+### Typography
+- **Font Family**: System fonts (SF Pro Display, Roboto, etc.)
+- **Heading Size**: 2.5rem (h1)
+- **Body Size**: 1rem
+- **Small Text**: 0.85rem
+
+### Spacing
+- **Base Unit**: 4px
+- **Standard Gaps**: 8px, 12px, 16px, 20px, 24px
+
+## 🧪 Testing
+
+To run tests (if configured):
+```bash
+npm test
+```
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `build` folder.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+Created for Software Engineering Lab 6
+
+## 🔗 Links
+
+- [GitHub Repository](https://github.com/Irunelopez/Software-engineering-lab6)
+- [React Documentation](https://react.dev)
+- [Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
