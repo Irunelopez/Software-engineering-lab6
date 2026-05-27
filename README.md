@@ -84,26 +84,18 @@ We developed this application progressively across 4 distinct versions to refine
 
 
 ### 1. Dashboard View & Habit Definition (US-01)
-<div align="center">
-  <img src="path/to/your/dashboard-screenshot.png" alt="Main Dashboard Interface" width="80%" style="border: 1px solid #ddd; border-radius: 8px;" />
-  <p><em>Figure 1: The main interface showing the form to add habits and active tracking lists.</em></p>
-</div>
 
-<br />
+<img width="531" height="843" alt="image" src="https://github.com/user-attachments/assets/7a1d8349-2de2-4e07-b6b5-af45fbb6d08c" />
+
 
 ### 2. Marking Completion & History Tracking (US-02 & US-03)
-<div align="center">
-  <img src="path/to/your/calendar-screenshot.png" alt="Completion and Calendar View" width="80%" style="border: 1px solid #ddd; border-radius: 8px;" />
-  <p><em>Figure 2: Habits checked off for the day reflecting changes directly onto the active compliance calendar grid.</em></p>
-</div>
 
-<br />
+<img width="466" height="271" alt="image" src="https://github.com/user-attachments/assets/53b2db40-3119-418d-a99e-4eff6ffe19f4" />
+
 
 ### 3. Action Reversal & System Feedback (Undo Actions)
-<div align="center">
-  <img src="path/to/your/undo-screenshot.png" alt="Undo Action Banner" width="80%" style="border: 1px solid #ddd; border-radius: 8px;" />
-  <p><em>Figure 3: Visual feedback toast showing successful actions with a fully functional 'Undo' button.</em></p>
-</div>
+
+<img width="635" height="733" alt="image" src="https://github.com/user-attachments/assets/cc72f659-dbe5-4af6-8336-2de26b0e4af2" />
 
 ---
 
@@ -123,7 +115,4 @@ We developed this application progressively across 4 distinct versions to refine
 ---
 
 How to run:
-1. pnpm install
-2. pnpm dev
-3. go to localhost shown in the log
-
+$env:DISABLE_ESLINT_PLUGIN="true"; pnpm start
