@@ -43,6 +43,18 @@
   border-left-color: #ffc107;
 }
 
+.confirmation-completed {
+  background: linear-gradient(135deg, #fff9e6 0%, #fff4d4 100%);
+  color: #cc6600;
+  border-left-color: #ff9800;
+}
+
+.confirmation-undo-completed {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #1565c0;
+  border-left-color: #2196f3;
+}
+
 .confirmation-content {
   display: flex;
   align-items: center;

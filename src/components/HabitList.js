@@ -1,7 +1,7 @@
 import React from 'react';
 import './HabitList.css';
 
-function HabitList({ habits, onUndo }) {
+function HabitList({ habits, onUndo, onToggleCompletion }) {
   if (habits.length === 0) {
     return (
       <div className="empty-state" role="status" aria-label="No habits yet">
@@ -13,7 +13,11 @@ function HabitList({ habits, onUndo }) {
   }
 
   return (
-    <div className="habits-list-container" role="region" aria-label="Your habits list">
+    <div
+      className="habits-list-container"
+      role="region"
+      aria-label="Your habits list"
+    >
       <div className="list-header">
         <h2>Your Habits</h2>
         <span className="list-count" aria-live="polite">
@@ -23,14 +27,43 @@ function HabitList({ habits, onUndo }) {
 
       <ul className="habits-list" role="list">
         {habits.map((habit, index) => (
-          <li key={habit.id} className="habit-item" role="listitem">
+          <li
+            key={habit.id}
+            className={`habit-item ${habit.completed ? 'completed' : ''}`}
+            role="listitem"
+          >
             <div className="habit-badge">{index + 1}</div>
             <div className="habit-details">
               <h3 className="habit-name">{habit.name}</h3>
-              <p className="habit-time" aria-label={`Created at ${habit.createdAt}`}>
+              <p
+                className="habit-time"
+                aria-label={`Created at ${habit.createdAt}`}
+              >
                 ⏰ {habit.createdAt}
               </p>
+              {habit.completed && habit.completedAt && (
+                <p className="habit-completed-time">
+                  ✓ Completed at {habit.completedAt}
+                </p>
+              )}
             </div>
+            <button
+              className={`completion-checkbox ${habit.completed ? 'checked' : ''}`}
+              onClick={() => onToggleCompletion(habit.id)}
+              aria-label={`Mark ${habit.name} as ${habit.completed ? 'incomplete' : 'completed'}`}
+              aria-pressed={habit.completed}
+              title={habit.completed ? 'Mark as incomplete' : 'Mark as completed'}
+            >
+              {habit.completed ? (
+                <>
+                  <span className="checkmark">✓</span>
+                </>
+              ) : (
+                <>
+                  <span className="empty-checkbox"></span>
+                </>
+              )}
+            </button>
           </li>
         ))}
       </ul>

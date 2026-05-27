@@ -20,6 +20,18 @@ function ConfirmationMessage({ habitName, type = 'success', onClose }) {
       message: `"${habitName}" has been removed from your list.`,
       className: 'confirmation-undo',
     },
+    completed: {
+      icon: '🎉',
+      title: 'Habit Completed!',
+      message: `Great job! "${habitName}" marked as completed for today.`,
+      className: 'confirmation-completed',
+    },
+    undoCompleted: {
+      icon: '↩️',
+      title: 'Completion Undone',
+      message: `"${habitName}" has been marked as incomplete.`,
+      className: 'confirmation-undo-completed',
+    },
   };
 
   const config = messageConfig[type] || messageConfig.success;
