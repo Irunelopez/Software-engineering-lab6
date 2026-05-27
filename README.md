@@ -122,3 +122,8 @@ We developed this application progressively across 4 distinct versions to refine
 
 ---
 
+How to run:
+1. pnpm install
+2. pnpm dev
+3. go to localhost shown in the log
+
