@@ -6,7 +6,7 @@ This repository contains an iterative implementation of a **Habits Tracking Appl
 
 ---
 
-## 👥 Team Members
+##Team Members
 Carme Castellón, Ainhoa Jimenez, Yihan Jin, Joan Redondo, Livia Fernández, Iago Fontanals, Irune López
 
 ---
